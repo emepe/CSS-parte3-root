@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
+
+:root{
+    --font-size-small: 16px;
+    --font-size-medium: 18px;
+    --font-size-large: 32px;
+
+    --spacing-none: 0px;
+    --spacing-small: 10px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
+    --spacing-xlarge: 25px;
+}
+
+*{
+    font-family: "Blinker";
+}
+body{
+    margin: var(--spacing-none);
+    padding: var(--spacing-none);
+    box-sizing: border-box;
+    background-color: #242424;
+    font-family: "Blinker";
+    font-size: var(--font-size-medium);
+    color: #fff;
+}
+
+header{
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+main{
+    overflow: auto;
+    position: relative;
+    min-height: 80vh;
+}
+
+img{
+    width: 65px;
+    padding-bottom: 0;
+}
+
+h1{
+    font-size: var(--font-size-large);
+    font-weight: 300;
+    margin-top: var(--spacing-large);
+    margin-bottom: var(--spacing-none);
+}
+
+h2{
+    background-color: #333;
+    text-align: center;
+    margin-top: var(--spacing-none);
+    font-weight: 200;
+    font-size: var(--font-size-medium);
+    letter-spacing: 2px;
+    padding-bottom: var(--spacing-large);
+    position: sticky;
+    top: 60px;
+    z-index: 900;
+    padding: 10px;
+}
+
+h3{
+    background-color: #414141;
+    font-weight: 300;
+    text-align: center;
+    width: 800px;
+    height: 60px;
+    align-content: center;    
+    border-radius: 5px;
+    z-index: 10;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: var(--spacing-none);
+    font-size: var(--font-size-medium);
+}
+
+h3:hover{
+    transform: scale(1);
+    background-color: #333333;
+}
+
+.aulas div, .aulas nav{
+    position: relative;
+    width: 800px;
+}
+
+.aulas{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;;
+}
+
+ul{
+    background-color: #555555;
+    height: 70px;
+    align-content: center;  
+    margin-top: -10px;  
+    border-radius: 5px;
+    list-style-type: "▸  ";
+    padding-left: 50px;
+    z-index: 900;
+}
+
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: var(--font-size-small);
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+footer{
+    color: #ffff;
+    background-color: #333;
+    height: 75px;
+    width: 100%;
+    padding-bottom: var(--spacing-none);
+    text-align: center;
+    align-content: center;
+    letter-spacing: 1px;
+    margin-top: var(--spacing-large);
+}
+
+.dropdown input{
+    display: none;
+}
+
+.dropdown-menu{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.dropdown input:checked ~ .dropdown-menu{
+    display: block;
+    max-height: 200px;
+    opacity: 1;
+} 
+
+.aula08-texto{
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+
+
+/* Mobile First */
+@media(max-width: 600px){
+    body{
+        box-sizing: border-box;
+    }
+    
+    .aulas div, .aulas nav{
+        width: 90%;
+    }
+    .dropdown{
+        width: 90%;
+    }
+    
+    .aulas{
+        padding-left: 4%;
+    }
+
+    h3{
+        width: 90%;
+    }
+
+    ul{
+        min-height: 125px;
+        max-height: 150px;
+    }
+}
+
+/* Tablet */
+@media(min-width: 601px) and (max-width: 768px){
+    body{
+        box-sizing: border-box;
+    }
+
+    .aulas div, .aulas nav{
+        width: 90%;
+    }
+
+    .aulas{
+        padding-left: 4%;
+    }
+
+    h3{
+        width: 90%;
+    }
+
+    .dropdown{
+        width: 90%;
+    }
+    .aulas{
+        align-content: center;
+        align-items: center;
+    }
+/* NESTE INTERVALO SE ENCONTRA O LIMBO, ONDE DISPOSITIVOS DE TAMANHO >=769px e <=1023px 
+VÃO FICAR COM A TELA DO SITE BRANCA */
+
+/* Desktop */
+@media(min-width: 1024px)
